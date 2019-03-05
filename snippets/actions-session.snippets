@@ -1,0 +1,23 @@
+# scope: json
+
+snippet set:Jasonette-Actions-Session
+	"type": "\$session.set",
+	"options": {
+		"domain": "http://example.com",
+		"header": {
+			//HTTP header param:value pairs
+		}
+	}
+
+snippet reset:Jasonette-Actions-Session
+	"type": "\$session.reset",
+	"options": {
+		"url": "The url from which to sign out",
+		"domain": "http://example.com",
+		"data": {
+			"param1": "value1"
+		},
+		"type": "json|html"
+	},
+	//success
+	//error

@@ -1,0 +1,27 @@
+# scope: json
+
+snippet camera:Jasonette-Actions-Media
+	"//": "http://docs.jasonette.com/actions/#mediacamera",
+	"type": "\$media.camera",
+	"options": {
+	"type": "photo",
+	"edit": "true if allowed to edit",
+	"quality": "medium|high|low" 
+	},
+	//success
+
+snippet picker:Jasonette-Actions-Media
+	"type": "\$media.picker",
+	"options": {
+		"type": "video",
+		"edit": "true",
+		"quality": "medium|high|low" 
+	},
+	//success
+
+snippet play:Jasonette-Actions-Media
+"type": "\$media.play",
+"options": {
+	"url": "https://vjs.zencdn.net/v/oceans.mp4",
+	"muted": "true to mute the sound
+}

@@ -1,0 +1,28 @@
+# scope: json
+
+#Used to describe links between views
+snippet href:Jasonette-Link
+	"// comment": "Used to describe links between views",
+	"href":{
+		"url": "http://www.example.com/myfile.jason",
+		"view": "jason|web|app",
+		"options": {
+			"param1": "value1",
+			"param2": "value2",
+		},
+		"transition": "push|modal|replace",
+		"loading": "true|false",
+		"preload": {
+			"style": { "background": "#ff0000" },
+			"layers": [{ 
+				"type": "image", 
+				"url": "file://loading.gif", 
+				"style": { 
+					"top": "50%-25", 
+					"left": "50%-25", 
+					"width": "50", 
+					"height": "50" 
+				}
+			}]
+		}
+	},

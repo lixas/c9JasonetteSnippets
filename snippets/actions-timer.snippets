@@ -1,0 +1,16 @@
+# scope: json
+
+snippet start:Jasonette-Actions-Timer
+	"type": "\$timer.start",
+	"options": {
+		"interval": "timer interval in seconds",
+		"name": "name of the timer (used later to stop it)",
+		"repeats": "true",
+		//action
+	}
+
+snippet stop:Jasonette-Actions-Timer
+	"type": "\$timer.stop",
+	"options": {
+		"name": "Name of the started timer. Stop all it name is not specified"
+	}

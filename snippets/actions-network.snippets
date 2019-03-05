@@ -1,0 +1,31 @@
+# scope: json
+
+snippet $require:Jasonette-Actions-Network
+	"//":"http://docs.jasonette.com/actions/#require_1",
+	"//":"Imports remote JSON files in parallel.",
+	"type": "\$require",
+	"options": {
+		"profiles": ["https://...", "https://..."],
+		"items": ["https://...", "https://..."],
+		"Item": "http://example/singleURL.json"
+	},
+	//success
+	//error
+
+snippet request:Jasonette-Actions-Network
+	"type": "\$network.request",
+	"options": {
+		"url": "http://www.jasonbase.com/messages.json",
+		"method": "get|post|put|delete|head|patch",
+		"data": {
+			"param1": "value1",
+			"param2": "value2"
+		},
+		"header": {
+			"auth_token": "fnekfla98dls9sNFK0nf3"
+		},
+		"timeout": "request time out in seconds",
+		"data_type": "json|html|rss|raw"
+	},
+	//success
+	//error

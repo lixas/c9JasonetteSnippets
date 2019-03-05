@@ -1,16 +1,165 @@
 # scope: json
 
 snippet label:Jasonette-Components
-	{
-		"type": "label",
-		"text": "My label text",
-		"style": { }
+	"type": "label",
+	"text": "My label text",
+	//labelStyle
+
+snippet labelStyle:Jasonette-Components
+	"style":{
+		"font": "text font name",
+		"size": "text size",
+		"color": "text color in color code",
+		"padding": "padding in pixels",
+		"background": "background color of the label in color code",
+		"corner_radius": "corner radius for the label"
+	}
+
+
+snippet image:Jasonette-Components
+	"type": "image",
+	"url": "http://example.com/image.png",
+	"header": {
+		"auth_token": "3nfdss3fNdlenghs_dnekgldnvq334hd"
+	},
+	//imageStyle
+
+snippet imageStyle:Jasonette-Components
+	"style":{
+		"corner_radius": "corner radius. use this to make the image rounded",
+		"width": "",
+		"height": "",
+		"color": "To set the tint color (only for icons)"
 	}
 
 snippet button:Jasonette-Components
-	{
-		"type": "button",
-		"action": {
-			"trigger": "\$reload"
+	"type": "button",
+	"text": "button text (pick either text or url, can't have both)",
+	"url": "button image url (pick either text or url, can't have both)",
+	"header": {
+		"auth_token": "3nfdss3fNdlenghs_dnekgldnvq334hd"
+	},
+	//buttonStyle
+	//action or trigger
+
+snippet buttonStyle:Jasonette-Components
+	"style": {
+		"width": "Width of the clickable region (In case of image buttons, the image will auto-resize proportionally to fit into this region)",
+		"height": "Height of the clickable region (In case of image buttons, the image will auto-resize proportionally to fit into this region)",
+		"color": "text color",
+		"background": "background color",
+		"border_width": "border width for the button",
+		"border_color": "border color for the button",
+		"color": "To set the tint color (only for icons)",
+		"corner_radius": "corner radius for the button",
+		"padding": "padding outside of the text (in case of text button) or outside of the image (in case of image button)",
+		"align": "left|center|right Only for text buttons"
+	}
+
+snippet textfield:Jasonette-Components
+	"type": "textfield",
+	"name": "FieldName",
+	"value": "Predefined value",
+	"placeholder": "Placeholder text",
+	"keyboard": "text|number|phone|decimal|url|email",
+	"focus": "true to autofocus when this component loads",
+	//textFieldStyle
+
+snippet textFieldStyle textAreaStyle:Jasonette-Components
+	"style": {
+		"align": "left|center|right",
+		"background": "color code",
+		"color": "text color code",
+		"placeholder_color": "placeholder text color",
+		"font": "text font",
+		"width": "width in pixels",
+		"height": "height in pixels",
+		"autocorrect": "false|true",
+		"autocapitalize": "false|true",
+		"spellcheck": "false|true",
+		"size": "text size",
+		"secure": "hide character input if set to true. Only for textfield"
+	}
+
+	
+snippet textarea:Jasonette-Components
+	"type": "textarea",
+	"name": "name of the local variable to set",
+	"value": "in case you wish to prefill the field",
+	"placeholder": "Placeholder text for when there's no content filled in",
+	"keyboard": "text|number|phone|decimal|url|email",
+	"focus": "true to autofocus when this component load",
+	//textAreaStyle
+
+
+snippet slider:Jasonette-Components
+	"type": "slider",
+	"name": "name of the local variable to set",
+	"value": "value between 0 and 1 (in string) to preset the slider with. For example 0.3",
+	//sliderStyle
+	//action
+
+
+snippet sliderStyle:Jasonette-Components
+	"style":{
+		"width": "",
+		"height": "",
+		"color": ""
+	}
+
+
+snippet switch:Jasonette-Components
+	"type": "switch",
+	"name": "name of the local variable to set",
+	"value": "false|true",
+	//switchStyle
+	//action
+
+
+snippet switchStyle:Jasonette-Components
+	"style":{
+		"color": "",
+		"color:disabled": ""
+	}
+
+
+snippet html:Jasonette-Components
+	"type": "html",
+	"style":{
+		"height": "area height in pixels"
+	},
+	"text": "<html><body>text</body></html>"
+
+
+snippet space:Jasonette-Components
+	"type": "space",
+	"style"{
+		"background": "background color (transparent if not specified)",
+		"width": "only specify if you want a horizontally fixed size space",
+		"height": "only specify if you want a vertically fixed size space",
+	}
+
+
+snippet map:Jasonette-Components
+	"type": "map",
+	"region":{
+		"coord": "Coordinate string in LATITUDE,LONGITUDE format, around which the map should be centered",
+		"width": "The width in meters in terms of how wide the map region should be",
+		"height": "The height in meters in terms of how wide the map region should be"
+	},
+	"pins": [{
+		"coord": "Coordinate string in LATITUDE,LONGITUDE format",
+		"title": "Title of the pin",
+		"description": "description of the pin",
+		"style":{
+			"selected": "false|true display the annotation by default even when not tapped"
 		}
+	},
+	{...}
+	],
+	"style":{
+		"type": "satellite|hybrid|hybrid_flyover|satellite_flyover",
+		"width": "width of the component to display",
+		"height": "height of the component to display",
+		"corner_radius": "corner radius of the component"
 	}

@@ -1,0 +1,16 @@
+# scope: json
+
+snippet set:Jasonette-Actions-Global
+	"type": "\$global.set",
+	"options": {
+		"items": "{{\$jason}}",
+		"param1": "value1"
+	}
+
+snippet get:Jasonette-Actions-Global
+	"{{\$global.variableName}}"
+
+snippet reset:Jasonette-Actions-Global
+	"//": "The following will wipe out all the global variables named key1 and key2.",
+	"type": "\$global.reset",
+	"items": ["key1", "key2"]

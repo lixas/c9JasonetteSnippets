@@ -1,0 +1,67 @@
+# scope: json
+
+snippet reload:Jasonette-Actions-View
+	"type": "\$reload"
+
+snippet render:Jasonette-Actions-View
+	"type": "\$render",
+	"options":{
+		"data": [{
+			
+		},{
+			
+		}],
+		"template": "TemplateName. If not specified, it will look for \$jason.head.templates.body",
+		"type": "json|html"
+	}
+
+snippet snaphot:Jasonette-Actions-View
+	"type": "\$snapshot",
+	//success
+	
+	
+snippet href:
+	"type": "\$href",
+	"options": {
+		"url": "http://example.com/file.json",
+		"view": "jason|web|app",
+		"options": {
+			"param1": "value1"
+		},
+		"transition": "push|modal|fullscreen",
+		"preload": {
+			"style": { "background": "#ff0000" },
+			"layers": [{ 
+				"type": "image", 
+				"url": "file://loading.gif", 
+				"style": { 
+					"top": "50%-25", 
+					"left": "50%-25", 
+					"width": "50", 
+					"height": "50" 
+				}
+			}]
+		}
+	}
+
+snippet close:Jasonette-Actions-View
+	"//": "Close a modal (works when the currently view is a modal)",
+	"type": "\$close"
+
+snippet back:Jasonette-Actions-View
+	"//": "Transition one step back from the current view orclose modal",
+	"type": "\$back"
+
+snippet ok:Jasonette-Actions-View
+	"//": "go \$back with ability to return value",
+	"type": "\$ok",
+	"options": {
+		"param1": "value2"
+	}
+
+snippet scroll:Jasonette-Actions-View
+	"//": "Programmatically scroll to top or bottom of a view",
+	"type": "\$scroll",
+	"options": {
+		"position": "top|bottom"
+	}

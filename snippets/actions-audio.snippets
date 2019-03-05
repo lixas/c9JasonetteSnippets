@@ -1,0 +1,47 @@
+# scope: json
+
+snippet play:Jasonette-Actions-Audio
+	"//": "Toggles between play and pause state if called multiple times",
+	"type": "\$audio.play",
+	"options": {
+		"title": "Title of the song",
+		"author": "Sont author",
+		"album": "Album title",
+		"image": "http://example.com/image.jpg",
+		"url": "http://example.com/song.mp3"
+	}
+
+snippet pause:Jasonette-Actions-Audio
+	"type": "\$audio.pause",
+	"options": {
+		"url": "http://example.com/song.mp3 if specified, pauses ONLY this url. Otherwise, pauses all audios currently playing"
+	}
+
+snippet stop:Jasonette-Actions-Audio
+	"type": "\$audio.stop",
+	"options": {
+		"url": "http://example.com/song.mp3 if specified, pauses ONLY this url. Otherwise, pauses all audios currently playing"
+	}
+
+snippet seek:Jasonette-Actions-Audio
+	"type": "\$audio.seek",
+	"options": {
+		"url": "http://example.com/song.mp3",
+		"position": "0.3"
+	}
+
+snippet duration:Jasonette-Actions-Audio
+	"type": "\$audio.duration",
+	"options": {
+		"url": "http://example.com/song.mp3"
+	},
+	//success
+
+snippet record:Jasonette-Actions-Audio
+	"type": "\$audio.record",
+	"options": {
+		"color": "tint color when active",
+		"color:disabled": "tint color when paused",
+		"theme": "light. Otherwise omit"
+	},
+	//success

@@ -1,0 +1,30 @@
+# scope: json
+
+snippet $load:Jasonette-Actions-SystemEvent
+	"//": "Called once automatically when the view loads for the first time",
+	"\$load": {
+		"type": "\$network.request",
+		"options": {
+			"url": "http://jasonclient.org/req.json"
+		},
+		//success
+	}
+
+snippet $show:Jasonette-Actions-SystemEvent
+	"//":"Called automatically every time the view appears",
+	"//":"For example when coming back from a modal view, coming back from its next view via back button, etc",
+	"\$show": {
+		"type": "\$reload"
+	}
+
+snippet $foreground:Jasonette-Actions-SystemEvent
+	"//":"Called automatically whenever the app comes back from the background state",
+	"\$foreground": {
+		"type": "\$reload"
+	}
+
+snippet $pull:Jasonette-Actions-SystemEvent
+	"//":"Called whenever user makes a pull to refresh action",
+	"\$pull": {
+		"type": "\$reload"
+	}

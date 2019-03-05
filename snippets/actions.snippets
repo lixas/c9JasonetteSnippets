@@ -1,0 +1,38 @@
+# scope: json
+
+snippet action:Jasonette-Actions
+	"action": {
+		//reload render request banner picker datepicker addressbook
+	},
+
+snippet trigger:Jasonette-Actions
+	"action": {
+		"trigger": "PredefinedActionNameInHead",
+	},
+
+snippet success:Jasonette-Actions
+	"success": {
+		//render alertbasic banner toast share
+	},
+
+snippet error:Jasonette-Actions
+	"error": {
+		//alertbasic banner toast
+	}
+
+snippet include:Jasonette-Actions-Script
+	"type": "\$script.include",
+	"options": {
+		"items": [
+			{ "url": "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" },
+			{ "text": "var randomcolor = function() { return '#'+Math.floor(Math.random()*16777215).toString(16); }" },
+			{ "url": "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" },
+			{ "url": "https://rawgit.com/mathiasbynens/he/master/he.js" }
+		]
+	},
+	//success
+
+snippet geo:Jasonette-Actions-Geo
+	"//": "accesible as {{\$jason.coord}}",
+	"type": "\$geo.get",
+	//success

@@ -1,0 +1,244 @@
+# scope: json
+
+snippet jason:Jasonette-View
+	{
+		"\$jason": {
+			"head": {
+				"title": "My New App Name",
+				"description": "A jasonette app description",
+				"icon": "file://images/hello.png|https://s3.amazonaws.com/jasonclient/hello.png",
+				"offline": "true|false",
+				"styles": {
+					"MyStyleName": {
+						"font": "HelveticaNeue",
+						"size": "20",
+						"color": "#ff0000",
+						"padding": "10"
+					}
+				},
+				"actions": { },
+				"templates": { },
+				"data": { },
+				"agents": { }
+			},
+			"body": {
+				"header": {
+					//titleBasic or titleAdvanced
+					//headStyle
+				},
+				//sections or sections-horizontal
+				//layers
+				//footer-chat or footer-tabs
+			}
+		}
+	}
+
+snippet titleBasic
+	"title": "[Title goes here]"
+
+snippet titleAdvanced
+	"title": {
+		"type": "label|image",
+		"text": "In case it's a label type",
+		"url": "In case it's a image type https://example.com/logo.png",
+		"style": {
+			"align": "left|center If not specified, it's center by default"
+			"width": "value in pixels",
+			"height": "value in pixels",
+			"top": "top offset",
+			"font": "Font name in case type is label",
+			"size": "Font size in case type is label"
+		}
+	}
+
+#Apply style, predefined in 
+snippet class:Jasonette-View
+	"class": "MyStyleNameFromHead",
+
+#Used to describe component style
+snippet headStyle:Jasonette-View
+	"style": {
+		"font": "HelveticaNeue",
+		"size": "20",
+		"color": "text color code",
+		"background": "background color code"
+	},
+
+snippet search:Jasonette-View
+	"// comment": "Can be used in body header",
+	"search": {
+		"name": "MySearchFieldName",
+		"placeholder": "Search something",
+		//searchStyle
+		//action or trigger
+	}
+
+snippet searchStyle:Jasonette-View
+	"style": {
+		"background": "background color code",
+		"color": "tint color (for placeholder, text & icon)"
+	},
+
+snippet menu:Jasonette-View
+	"menu": {
+		"text": "Tap me",
+		//menuStyle
+		//action or trigger
+		,
+		"badge": {
+			"text": "3",
+			//badgeStyle
+		}
+	}
+	
+snippet menuStyle:Jasonette-View
+	"style": {
+		"color": "font color or image mask color",
+		"font": "font name",
+		"size": "font size"
+	},
+
+snippet badgeStyle:Jasonette-View
+	"style": {
+		"background": "background color for the badge",
+		"color": "text color for the badge"
+		"top": "x-offset of the badge"
+		"left": "y-offset of the badge"
+	},
+
+snippet sections::Jasonette-View
+	"sections": [{
+		"type": "vertical",
+		"items": [{
+			//label
+		}, {
+			//button
+		}, {
+			//layout
+		}]
+	}],
+
+snippet sections-horizontal:Jasonette-View
+	"sections": [{
+		"type": "horizontal",
+		"items": [{
+			//label
+		}, {
+			//button
+		}, {
+			//layout
+		}]
+	}],
+
+snippet layer:Jasonette-View
+	"layers": [{
+		"type": "label|image",
+		"text": "Text if type is label",
+		"url": " Image url to load",
+		//action
+		//layerStyle
+	}],
+
+snippet layerStyle:Jasonette-View
+
+	"style": {
+		"width": "pixels",
+		"height": "pixels",
+		"padding": "pixels if type is label",
+		"top": "pixels",
+		"left": "50%-25",
+		"right": "50%-25",
+		"bottom": "50%-25",
+		"corner_radius": "pixels",
+		"font": "if type is label",
+		"size": "if type is label",
+		"background": "if type is label",
+		"color": "#color",
+		"align": "left|center|right if type is label",
+		"resize": "false|true if type is image",
+		"move": "false|true if type is image",
+		"rotate": "false|true if type is image"
+	}
+
+
+snippet footer-chat:Jasonette-View
+	"footer": {
+		"input": {
+			"style": {
+				"background": "#cecece"
+			},
+			"left": {
+				"image": "http://example.com/camera.png",
+				"style": {
+					"color": "tint color for the image"
+				},
+				"action": {
+					"type": "\$media.camera"
+				}
+			},
+			"textfield": {
+				"name": "message",
+				"placeholder": "Say something...",
+				"style": {
+					"color": "font color",
+					"color:placeholder": "placeholder color",
+					"background": "background color for the input field"
+				}
+			},
+			"right": {
+				"text": "text to display as the right button",
+				"style": {
+					"color": "font color",
+					"color:disabled": "disabled state font color"
+				},
+				//action
+			}
+		}
+	}
+
+snippet footer-tabs:Jasonette-View
+	"footer": {
+		"tabs": {
+			"style": {
+				"background": "rgba(255,255,255,0.8)",
+				"color:disabled": "#cecece",
+				"color": "#009efa"
+			},
+			"items": [{
+					"image": "http://example.com/home.png",
+					"text": "Home",
+					"style": {
+						"height": "21"
+					},
+					"url": "http://example.com/home.json"
+				}, {
+					"image": "http://example.com/notifications.png",
+					"text": "Notifications",
+					"style": {
+						"height": "21"
+					},
+					"url": "http://example.com/notifications.json"
+				}, {
+					"image": "http://example.com/moments.png",
+					"text": "Moments",
+					"style": {
+						"height": "21"
+					},
+					"url": "http://example.com/moments.json"
+				}, {
+					"image": "http://example.com/messages.png",
+					"text": "Messages",
+					"style": {
+						"height": "21"
+					},
+					"url": "http://example.com/messages.json"
+				}, {
+				"image": "http://example.com/me.png",
+				"text": "Me",
+				"style": {
+					"height": "21"
+				},
+				"url": "http://example/me.json"
+			}]
+		}
+	}
