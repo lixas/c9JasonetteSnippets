@@ -15,9 +15,11 @@ snippet alertform:Jasonette-Actions-Utils
 		"description": "Try entering values and press OK",
 		"form": [{
 			"name": "username",
+			"value": "predefined value",
 			"placeholder": "Enter username"
 		}, {
 			"name": "password",
+			"value": "predefined password",
 			"placeholder": "Enter password",
 			"secure": "true"
 		}]
@@ -52,7 +54,7 @@ snippet share:Jasonette-Actions-Utils
 	}
 
 snippet picker:Jasonette-Actions-Utils
-	"type": \$util.picker",
+	"type": "\$util.picker",
 	"options": {
 		"items": [{
 			"text": "Trigger \$util.banner",
@@ -71,7 +73,8 @@ snippet datepicker::Jasonette-Actions-Utils
 	"options": {
 		"title": "Pick a date",
 		"description": "Just pick one"
-	}
+	},
+	//success
 
 snippet addressbook:
 	"type": "\$util.addressbook",

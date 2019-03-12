@@ -26,7 +26,7 @@ snippet jason:Jasonette-View
 					//titleBasic or titleAdvanced
 					//headStyle
 				},
-				//sections or sections-horizontal
+				//sections or sectionsHorizontal
 				//layers
 				//footer-chat or footer-tabs
 			}
@@ -82,6 +82,7 @@ snippet searchStyle:Jasonette-View
 snippet menu:Jasonette-View
 	"menu": {
 		"text": "Tap me",
+		"image": "http://example.com/icon.png",
 		//menuStyle
 		//action or trigger
 		,
@@ -96,7 +97,7 @@ snippet menuStyle:Jasonette-View
 		"color": "font color or image mask color",
 		"font": "font name",
 		"size": "font size"
-	},
+	}
 
 snippet badgeStyle:Jasonette-View
 	"style": {
@@ -104,7 +105,7 @@ snippet badgeStyle:Jasonette-View
 		"color": "text color for the badge"
 		"top": "x-offset of the badge"
 		"left": "y-offset of the badge"
-	},
+	}
 
 snippet sections::Jasonette-View
 	"sections": [{
@@ -116,9 +117,9 @@ snippet sections::Jasonette-View
 		}, {
 			//layout
 		}]
-	}],
+	}]
 
-snippet sections-horizontal:Jasonette-View
+snippet sectionsHorizontal:Jasonette-View
 	"sections": [{
 		"type": "horizontal",
 		"items": [{
@@ -128,7 +129,20 @@ snippet sections-horizontal:Jasonette-View
 		}, {
 			//layout
 		}]
-	}],
+	}]
+
+snippet componentsVertical:Jasonette-View
+	"type": "vertical",
+	"components": [
+		{
+			//image
+		}, {
+			//label
+		}, {
+			//button
+		}
+	]
+
 
 snippet layer:Jasonette-View
 	"layers": [{
@@ -137,7 +151,7 @@ snippet layer:Jasonette-View
 		"url": " Image url to load",
 		//action
 		//layerStyle
-	}],
+	}]
 
 snippet layerStyle:Jasonette-View
 
