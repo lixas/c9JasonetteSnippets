@@ -1,0 +1,19 @@
+# scope: json
+
+snippet agent:Jasonette-Agents
+	"agentName": {
+		"//":"Chose how you declare your \$agent- inline via text or external file via URL",
+		"text": "<html><script>var injected = function(a) { return a; }</script></html>"
+		"url": "file://web.html"
+	}
+
+snippet request:Jasonette-Agents
+	{
+		"type": "\$agent.request",
+		"options": {
+			"id": "agentName",
+			"method": "methodNameInAgent",
+			"params": ["Param1Value", "Param2Value"]
+		},
+		//success error
+	}
